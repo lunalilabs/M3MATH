@@ -22,6 +22,7 @@
   <img src="assets/difficulty.png" width="48%" alt="Difficulty distribution of seed data">
   <img src="assets/m3math.png" width="48%" alt="Overview of M3MATH composition">
 </p>
+
 ### 📍Example Instances
 
 <p align="center">
