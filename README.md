@@ -1,4 +1,4 @@
-# M3MATH: A Multiform, Multisubject, and Multilingual Dataset for Robust Mathematical Reasoning
+# M3MATH: A Multiform, Multisubject, and Multilingual Dataset for Enhancing Reasoning Consistency and Diversity
 
 ## 📖Overview
 
