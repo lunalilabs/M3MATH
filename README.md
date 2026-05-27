@@ -1,8 +1,8 @@
-# M3MATH: A Multiform, Multisubject, and Multilingual Dataset for Enhancing Reasoning Consistency and Diversity
+# M3MATH: A Multiform, Multisubject, and Multilingual Framework and Dataset for Enhancing Reasoning Consistency and Diversity
 
 ## 📖Overview
 
-**M3MATH** is a multiform, multisubject, and multilingual dataset built from challenging and automatically verifiable seed problems in Omni-MATH-2. 
+**M3MATH** is a multiform, multisubject, and multilingual framework for diversity enhancement and data synthesis.
 
 🌟 M3MATH is organized around three transformations: 
 
@@ -16,7 +16,11 @@
 
 - **Multilingual conversion.** After the above conversions, each problem is converted into aligned English and Chinese variants.
 
-🌟 **Characterization of seed data and M3MATH composition**. (a) Difficulty distribution of the selected seed problems from Omni-MATH-2-Filtered. (b) Composition of M3MATH. Although each seed problem is initially expanded into eight disciplinary candidate instances, the composition of M3MATH is derived from the final validated dataset rather than from the raw candidate pool.
+### 💥Seed Data Selection for Instantiation
+
+We select the exact-answer subset of Omni-MATH-2 with a difficulty level of ≥5 as our seed dataset. This manually revised subset is well-suited for M3MATH expansion, as it provides challenging tasks while excluding non-standard instances (e.g., proofs and estimations) to ensure reliable, automatic evaluation.
+
+🌟 **Characterization of the seed data and the generated dataset**. Although each seed problem is initially expanded into eight disciplinary candidate instances, the actual composition is derived from the final validated dataset rather than from the raw candidate pool.
 
 <p align="center">
   <img src="assets/difficulty.png" width="48%" alt="Difficulty distribution of seed data">
@@ -39,13 +43,13 @@
 
 For both the English and Chinese subsets of M3MATH (M3MATH-en and M3MATH-zh), we split the data into an 80% training set for RLVR and a 20% held-out test set for evaluation. The same split ratio is applied consistently across different question types and disciplinary subjects, ensuring that each subset preserves the overall distribution of formats and domains.
 
-Models: [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B), [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B), [Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B), [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B)
+Models: [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B) | [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) | [Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B) | [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B)
 
 ### 🛠️Quick Start
 
 The training and evaluation scripts are provided in [`code/`](code/). Training using the [verl](https://github.com/volcengine/verl).
 
-Before running, prepare `train.parquet` and `test.parquet` under `data/m3math/`, and update the model path in the scripts if your checkpoints are stored elsewhere.
+Before running, prepare `train.parquet` and `test.parquet` , and update the model path in the scripts if your checkpoints are stored elsewhere.
 
 Run CISPO training:
 
