@@ -1,4 +1,4 @@
-# M3MATH: A Multiform, Multisubject, and Multilingual Framework and Dataset for Enhancing Reasoning Consistency and Diversity
+# M3MATH: A Multiform, Multisubject, and Multilingual Framework and Dataset for Enhancing Diversity and Reasoning Consistency
 
 ## 📖Overview
 
