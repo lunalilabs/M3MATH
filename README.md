@@ -18,14 +18,15 @@
 
 We select the exact-answer subset of Omni-MATH-2 with a difficulty level of ≥5 as our seed dataset. This manually revised subset is well-suited for M3MATH expansion, as it provides challenging tasks while excluding non-standard instances (e.g., proofs and estimations) to ensure reliable, automatic evaluation.
 
-🌟 **Characterization of the seed data and the generated dataset**. Although each seed problem is initially expanded into eight disciplinary candidate instances, the actual composition is derived from the final validated dataset rather than from the raw candidate pool.
+**Characterization of the seed data and the generated dataset**. Although each seed problem is initially expanded into eight disciplinary candidate instances, the actual composition is derived from the final validated dataset rather than from the raw candidate pool.
 
 <p align="center">
   <img src="assets/difficulty.png" width="48%" alt="Difficulty distribution of seed data">
   <img src="assets/m3math.png" width="48%" alt="Overview of M3MATH composition">
 </p>
-
 ## 📍Example Instances
+
+Here are representative examples of the transformation design in M3MATH. 
 
 <p align="center">
   <img src="assets/example_data.png" width="90%" alt="Examples of M3MATH instances">
