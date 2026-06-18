@@ -24,6 +24,7 @@ We select the exact-answer subset of Omni-MATH-2 with a difficulty level of ≥5
   <img src="assets/difficulty.png" width="48%" alt="Difficulty distribution of seed data">
   <img src="assets/m3math.png" width="48%" alt="Overview of M3MATH composition">
 </p>
+
 ## 📍Example Instances
 
 Here are representative examples of the transformation design in M3MATH. 
@@ -31,6 +32,7 @@ Here are representative examples of the transformation design in M3MATH.
 <p align="center">
   <img src="assets/example_data.png" width="90%" alt="Examples of M3MATH instances">
 </p>
+
 ## 📊Experiments
 
 For both the English and Chinese subsets of M3MATH (M3MATH-en and M3MATH-zh), we split the data into an 80% training set for RLVR and a 20% held-out test set for evaluation. The same split ratio is applied consistently across different question types and disciplinary subjects, ensuring that each subset preserves the overall distribution of formats and domains.
