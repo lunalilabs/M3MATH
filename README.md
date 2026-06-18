@@ -2,9 +2,7 @@
 
 ## 📖Overview
 
-**M3MATH** is a multiform, multisubject, and multilingual framework for diversity enhancement and data synthesis.
-
-🌟 M3MATH is organized around three transformations: 
+**M3MATH** is a multiform, multisubject, and multilingual framework for diversity enhancement and data synthesis. It is organized around three transformations: 
 
 - **Type conversion.** Eligible problems are adapted into multiple-choice, fill-in-the-blank, and true/false forms.
 
@@ -16,7 +14,7 @@
 
 - **Multilingual conversion.** After the above conversions, each problem is converted into aligned English and Chinese variants.
 
-### 💥Seed Data Selection for Instantiation
+## 💥Seed Data Selection for Instantiation
 
 We select the exact-answer subset of Omni-MATH-2 with a difficulty level of ≥5 as our seed dataset. This manually revised subset is well-suited for M3MATH expansion, as it provides challenging tasks while excluding non-standard instances (e.g., proofs and estimations) to ensure reliable, automatic evaluation.
 
@@ -27,23 +25,22 @@ We select the exact-answer subset of Omni-MATH-2 with a difficulty level of ≥5
   <img src="assets/m3math.png" width="48%" alt="Overview of M3MATH composition">
 </p>
 
-### 📍Example Instances
+## 📍Example Instances
 
 <p align="center">
   <img src="assets/example_data.png" width="90%" alt="Examples of M3MATH instances">
 </p>
+## 📊Experiments
+
+For both the English and Chinese subsets of M3MATH (M3MATH-en and M3MATH-zh), we split the data into an 80% training set for RLVR and a 20% held-out test set for evaluation. The same split ratio is applied consistently across different question types and disciplinary subjects, ensuring that each subset preserves the overall distribution of formats and domains.
+
+Models: [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B) | [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) | [Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B) | [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B)
 
 ### 📃Data Download
 
 - Data file: [`data/omni-math-diversity.jsonl`](data/omni-math-diversity.jsonl)
 - Format: one JSON object per line
 - Core fields: `id`, `problem`, `answer`
-
-## 📊Experiments
-
-For both the English and Chinese subsets of M3MATH (M3MATH-en and M3MATH-zh), we split the data into an 80% training set for RLVR and a 20% held-out test set for evaluation. The same split ratio is applied consistently across different question types and disciplinary subjects, ensuring that each subset preserves the overall distribution of formats and domains.
-
-Models: [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B) | [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) | [Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B) | [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B)
 
 ### 🛠️Quick Start
 
@@ -69,19 +66,6 @@ bash code/eval.sh \
 ```
 
 > The training script uses `actor_rollout_ref.actor.policy_loss.loss_mode=cispo`, samples 5 rollouts per prompt, and trains with the custom verifiable reward. The evaluation script sets `trainer.val_only=True`, uses one deterministic rollout per prompt, and writes validation outputs to the configured `trainer.validation_data_dir`.
-
-### 🔮Main Results
-
-| Model | Setting | M3MATH En | M3MATH Zh | GPQA-Diamond | SuperGPQA | MMLU-Pro |
-|---|---|---:|---:|---:|---:|---:|
-| Qwen3-0.6B | w/o M3MATH | 11.6 | 12.5 | 20.5 | 19.1 | 27.2 |
-| Qwen3-0.6B | w/ M3MATH | **33.2** | **30.4** | **28.4** | **27.8** | **34.2** |
-| Qwen3-1.7B | w/o M3MATH | 18.8 | 19.7 | 28.1 | 22.8 | 42.2 |
-| Qwen3-1.7B | w/ M3MATH | **29.4** | **29.7** | **32.8** | **26.1** | **48.3** |
-| Qwen3-4B | w/o M3MATH | 41.6 | 43.2 | **40.8** | 33.1 | 56.2 |
-| Qwen3-4B | w/ M3MATH | **46.6** | **45.4** | 39.2 | **37.8** | **60.6** |
-| Qwen3-8B | w/o M3MATH | 45.4 | 45.9 | 38.1 | 30.6 | 57.2 |
-| Qwen3-8B | w/ M3MATH | **49.2** | **50.1** | **42.7** | **35.3** | **62.8** |
 
 ## 🙏Acknowledgements
 
