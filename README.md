@@ -8,10 +8,6 @@
 
 - **Cross-disciplinary conversion.** Seed problems are recontextualized by GPT-5.5 into eight disciplines, including mathematics, physics, chemistry, biology, literature, economics, geography, and history, while preserving the same mathematical structure. The converted problems are then screened using the two-stage consensus pipeline, in which Qwen3.6-Plus and DeepSeek-V4 independently solve each problem, followed by Kimi-K2.6 verifying the semantic consistency of their answers. Instances with disagreements that remain unresolved after reflection are discarded.
 
-  <p align="center">
-    <img src="assets/two-stage.png" width="85%" alt="Two-stage consensus-based solution generation pipeline">
-  </p>
-
 - **Multilingual conversion.** After the above conversions, each problem is converted into aligned English and Chinese variants.
 
 ## 💥Seed Data Selection for Instantiation
